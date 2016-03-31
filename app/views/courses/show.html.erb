@@ -1,9 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @course.title %>
-</p>
+<div class="row x_title">
+  <div class="col-md-6"> 
+  <h3><%= @course.title %></h3>
+    </div>
+</div>
+
+<blockquote><%= @course.description %></blockquote>
+
+
 
 <p>
   <strong>Duration:</strong>
@@ -20,10 +25,5 @@
   <%= image_tag(@course.picture_url, :width => 600) if @course.picture.present? %>
 </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @course.description %>
-</p>
-
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Back', courses_path %>
+<%= link_to 'Edit', edit_course_path(@course), :class => 'btn btn-warning btn-sm' %>
+<%= link_to 'Back', @courses_path, :class => 'btn btn-default' %>

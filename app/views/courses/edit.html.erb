@@ -1,7 +1,10 @@
-<h1>Editing Course</h1>
-
+<div class="row x_title">
+  <div class="col-md-6"> 
+  <h3>Editing Course</h3>
+    </div>
+</div>
 <%= render 'form' %>
 
-<%= link_to 'Show', @course %> |
-<%= link_to 'Back', courses_path %>
-<%= link_to 'Destroy', @course, :class => 'btn btn-danger btn-sm', method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= link_to 'Show', @course, :class => 'btn btn-primary' %>
+<%= link_to 'Back', courses_path, :class => 'btn btn-default' %>
+<%= link_to 'Destroy this course', @course, :class => 'btn btn-danger btn-sm pull-right', method: :delete, data: { confirm: 'Are you sure?' } %>
